@@ -1,0 +1,147 @@
+:root {
+	--title-font: "Poppins", sans-serif;
+	--text-font: "Inter", sans-serif;
+	
+	--title-size: 27pt;
+	--title-2-size: 20pt;
+	--text-size: 16pt;
+
+	--background-color: #F6FFF8;
+	--primary-color: #6B9080;
+	--secondary-color: #EAF4F4;
+	--accent-color: #D41D6C;
+	--text-color: #1C3528;
+
+	--primary-color-filter: invert(57%) sepia(38%) saturate(217%) hue-rotate(102deg) brightness(87%) contrast(90%);
+	--accent-black-filter: invert(22%) sepia(98%) saturate(2115%) hue-rotate(314deg) brightness(87%) contrast(101%);
+}
+
+* {
+	box-sizing: content-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: var(--text-font);
+	font-size: var(--text-size);
+	color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, .font-title { font-family: var(--title-font); }
+
+h1 { font-size: var(--title-size); }
+h2 { font-size: var(--title-2-size); }
+
+h1, h2, h3, h4, h5, h6, .color-primary {
+	color: var(--primary-color);
+}
+
+/* ----------- */
+
+header {
+	height: 100vh;
+	display: flex;
+}
+
+.title-center {
+	text-align: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3.125rem 2.5rem;
+	background-color: var(--secondary-color);
+	text-align: center;
+	border-radius: 13px;
+}
+
+.card img {
+	max-height: 48px;
+	filter: var(--accent-black-filter);
+}
+
+.card img + h2 {
+	margin-top: 15px;
+}
+
+.card h2 {
+	line-height: 120%; /* 48px */
+}
+
+section {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section#types-of-projects .col {
+	height: 217px;
+}
+
+section#types-of-projects .col .card {
+	flex-wrap: wrap;
+}
+
+section#comparison-table table.comparison-table {
+	/* display: block; */
+	width: 100%;
+	border-spacing: 0;
+}
+
+table.comparison-table td {
+	padding: 1rem;
+	/* border: 1px solid var(--primary-color); */
+}
+
+
+table.comparison-table tr:nth-child(even) {
+	background-color: var(--secondary-color);
+}
+
+table.comparison-table tr {
+	border-bottom: 1px solid var(--primary-color);
+	text-align: center;
+}
+
+table.comparison-table tr:first-child th {
+	padding: 1rem;
+}
+
+table.comparison-table td:first-child {
+	width: 300px;
+	text-align: left;
+	font-weight: bold;
+}
+
+table.comparison-table img.check {
+	width: 32px;
+	filter: var(--accent-black-filter);
+}
+
+input[type="text"], input[type="email"] {
+	padding: 0.8rem 1rem;
+	border-radius: 13px;
+	border: 1px solid var(--primary-color);
+}
+
+section#send-form form input {
+	font-size: 12pt;
+}
+
+section#send-form form button {
+	border-radius: 13px;
+	font-size: 12pt;
+	border: 0;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
