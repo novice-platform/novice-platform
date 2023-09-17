@@ -190,9 +190,8 @@
 			<iframe
 				style="display: none;"
 				id="hidden_iframe" name="hidden_iframe"
-				onload="alert('Form was sent successfully')"
 			></iframe>
-			<form action="https://docs.google.com/forms/d/e/1FAIpQLSerruO6dLUoJW8qbqk_fNodf27Lopg4ObEGl7-opZe1w-seIg/formResponse" target="hidden_iframe" method="post" onsubmit="return validateForm();" class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+			<form action="https://docs.google.com/forms/d/e/1FAIpQLSerruO6dLUoJW8qbqk_fNodf27Lopg4ObEGl7-opZe1w-seIg/formResponse" target="hidden_iframe" method="post" onsubmit="return submitHandler();" class="d-flex flex-column flex-md-row justify-content-center align-items-center">
 				<input class="mb-3 mb-md-0 ms-0 ms-md-3" type="text" placeholder="Name" name="entry.1890064868" required>
 				<input class="mb-3 mb-md-0 ms-0 ms-md-3" type="email" placeholder="Email" name="entry.936420581" required>
 				<button class="px-5 ms-0 ms-md-3" style="height: 46.4px; cursor: pointer;">Subscribe</button>
@@ -204,8 +203,8 @@
 	</main>
 
 	<script>
-		function validateForm() {
-			submitted = true;
+		function submitHandler() {
+			alert('Form was sent successfully')
 			return true;
 		}
 	</script>
